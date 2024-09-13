@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Default Reddit</title>
+	<style>
+		body {
+			width: 200px;
+		}
+
+		label {
+			display: block;
+		}
+
+		.group_hd {
+			font-size: large;
+			font-style: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<span class="group_hd" style="font-size: x-large;">Don't forget to <a
+			href="https://chromewebstore.google.com/detail/not-hot-enough/gjckgepdcejbfpbikkolabelfdbhooil"
+			target="_blank">leave a review</a></span><br><br>
+	<span class="group_hd">Set your defaults below: </span><br>
+	<span class="group_hd">Homepage:</span>
+	<form id="hpForm">
+		<label>Sorting by Best is disabled because the page gets stuck in a reload loop defaulting to Hot.</label>
+		<label style="display:none"><input type="radio" name="hp" value="0"> Best</label>
+		<label><input type="radio" name="hp" value="1"> Hot</label>
+		<label><input type="radio" name="hp" value="2"> New</label>
+		<label><input type="radio" name="hp" value="3"> Top</label>
+		<label><input type="radio" name="hp" value="4"> Rising</label>
+	</form>
+	<span class="group_hd">Posts:</span>
+	<form id="stForm">
+		<label><input type="radio" name="st" value="0"> Hot</label>
+		<label><input type="radio" name="st" value="1"> New</label>
+		<label><input type="radio" name="st" value="2"> Top</label>
+		<label><input type="radio" name="st" value="3"> Rising</label>
+	</form>
+
+	<span class="group_hd">Comments:</span>
+	<form id="stComForm">
+		<label><input type="radio" name="sc" value="0"> Best</label>
+		<label><input type="radio" name="sc" value="1"> Top</label>
+		<label><input type="radio" name="sc" value="2"> New</label>
+		<label><input type="radio" name="sc" value="3"> Controversial</label>
+		<label><input type="radio" name="sc" value="4"> Old</label>
+		<label><input type="radio" name="sc" value="5"> Q/A</label>
+	</form>
+	<script src="popup.js"></script>
+</body>
+
+</html>
