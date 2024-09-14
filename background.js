@@ -1,15 +1,11 @@
+chrome.webNavigation.onCommitted.addListener(handleNavigation);
+chrome.webNavigation.onHistoryStateUpdated.addListener(handleNavigation);
 
-chrome.webNavigation.onCommitted.addListener(function (details) {
-	loadHomePage(details)
-	loadPostSorting(details);
-	loadCommentSorting(details);
-});
-
-chrome.webNavigation.onHistoryStateUpdated.addListener(function (details) {
-	loadHomePage(details)
-	loadPostSorting(details);
-	loadCommentSorting(details);
-});
+async function handleNavigation(details) {
+    loadHomePage(details);
+    loadPostSorting(details);
+    loadCommentSorting(details);
+}
 
 async function loadHomePage(details) {
 	chrome.tabs.get(details.tabId, async function (tab) {
