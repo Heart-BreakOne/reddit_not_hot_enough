@@ -26,7 +26,7 @@
 	<span class="group_hd">Set your defaults below: </span><br>
 	<span class="group_hd">Homepage:</span>
 	<form id="hpForm">
-		<label>Sorting by Best is disabled because the page gets stuck in a reload loop defaulting to Hot.</label>
+		<label>Sorting by Best is disabled because the page gets stuck in a reload loop trying to default to Hot.</label>
 		<label style="display:none"><input type="radio" name="hp" value="0"> Best</label>
 		<label><input type="radio" name="hp" value="1"> Hot</label>
 		<label><input type="radio" name="hp" value="2"> New</label>
@@ -50,6 +50,9 @@
 		<label><input type="radio" name="sc" value="4"> Old</label>
 		<label><input type="radio" name="sc" value="5"> Q/A</label>
 	</form>
+	<span class="group_hd" style="font-size: small;"><a
+		href="change_log.html"
+		target="_blank">Change log</a></span><br><br>
 	<script src="popup.js"></script>
 </body>
 

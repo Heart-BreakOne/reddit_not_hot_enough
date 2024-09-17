@@ -1,6 +1,10 @@
 chrome.webNavigation.onCommitted.addListener(handleNavigation);
 chrome.webNavigation.onHistoryStateUpdated.addListener(handleNavigation);
 
+//Posts Top can sort by time period.
+// Main page Top can sort by time period. 
+// Main page Hot can sort by location.
+
 async function handleNavigation(details) {
     loadHomePage(details);
     loadPostSorting(details);
